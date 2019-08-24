@@ -10,6 +10,15 @@
 </dependency>
 ```
 
+### yml配置
+
+```yml
+sms:
+  ali:
+    access-key-id: xxxx
+    access-key-secret: xxxx
+```
+
 ### 发送短信方法
 
 ```java
@@ -39,13 +48,17 @@ public class DemoApplicationTests {
 
     @Test
     public void contextLoads() {
-        String signName = "叠石桥家纺";
-        String phoneNumber = "18662823907";
-        String templateCode = "SMS_96970009";
-        // 构建templateParam
+        // 短信签名
+        String signName = "示例签名";
+        // 手机号
+        String phoneNumber = "1866282xxxx";
+        // 短信模板号
+        String templateCode = "SMS_9697xxxx";
+        // 模板参数
+        String templateParam = null;
+        // 构建模板参数
         HashMap<String, String> map = new HashMap<>(1);
         map.put("code", "888888");
-        String templateParam = null;
         try {
             ObjectMapper mapper = new ObjectMapper();
             templateParam = mapper.writeValueAsString(map);
