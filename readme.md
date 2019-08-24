@@ -1,5 +1,15 @@
 ## 阿里云短信通道场景启动器
 
+### 引入starter
+
+```xml
+<dependency>
+    <groupId>me.sdevil507</groupId>
+    <artifactId>ali-sms-spring-boot-starter</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
 ### 发送短信方法
 
 ```java
