@@ -24,6 +24,7 @@ public class AliSmsSenderImpl implements AliSmsSender {
     public AliSmsSenderImpl(String accessKeyId, String accessKeySecret) {
         DefaultProfile profile = DefaultProfile.getProfile("default", accessKeyId, accessKeySecret);
         this.client = new DefaultAcsClient(profile);
+        log.info("阿里云短信发送Client端初始化成功...");
     }
 
     @Override
